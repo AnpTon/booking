@@ -12,7 +12,7 @@ CREATE TABLE users (
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 Insert Into users (name, email, password, role)
-Values('John Doe', 'jdoe@gmail.com', 'admin', 'admin'),
+Values('John Doe', 'jdoe@gmail.com', 'admin', 'librarian'),
 ('Jane Dae', 'jdae@gmail.com', 'user', 'user');
 -- Bookss
 CREATE TABLE books (
