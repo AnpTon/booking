@@ -23,7 +23,7 @@ CREATE TABLE books (
     status ENUM('available', 'borrowed') NOT NULL DEFAULT 'available',
     date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Insert Into books (title, author, description);
+Insert Into books (title, author, description)
 VALUES('Whatever, Whenever', 'William Williom', 'Whenever is Whatever but can Whatever truly be Whenever'),
 ('Wherever, Whenever', 'Williom William', 'Whenever is Wherever but can Wherever truly be Whenever');
 -- Borrow Records
