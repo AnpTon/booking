@@ -12,8 +12,8 @@ CREATE TABLE users (
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 Insert Into users (name, email, password, role)
-Values('John Doe', 'jdoe@gmail.com', 'admin', 'librarian'),
-('Jane Dae', 'jdae@gmail.com', 'user', 'user');
+Values('John Doe', 'jdoe@gmail.com', '$2y$10$DEYY5R2ggjSeE.ariSiLZ.cmITttVwHT6uFPQivZPT8FG02eEwQmG', 'librarian'),
+('Jane Dae', 'jdae@gmail.com', '$2y$10$EvxlRXwatAWl6oIBf/abD.IfIJJ930Ip2kyR5.Q.Vky7yNF9bXCU6', 'user');
 -- Bookss
 CREATE TABLE books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,

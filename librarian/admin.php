@@ -7,5 +7,6 @@
 </head>
 <body>
     <h2>Hi</h2>
+    <a href="../auth/logout.php">Logout</a>
 </body>
 </html>
