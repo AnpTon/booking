@@ -11,18 +11,16 @@ if (!$book) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
     $title = $_POST['title'];
     $author = $_POST['author'];
     $description = $_POST['description'];
-    $status = $_POST['status'];
 
     $stmt = $conn->prepare("
         UPDATE books 
         SET title=?, author=?, description=?
         WHERE book_id=?
     ");
-    $stmt->bind_param("ssssi", $title, $author, $description, $id);
+    $stmt->bind_param("sssi", $title, $author, $description, $id);
 
     if ($stmt->execute()) {
         header("Location: admin.php?tab=books");
