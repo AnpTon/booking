@@ -19,15 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $stmt = $conn->prepare("
-            UPDATE users SET username=?, password=?, role=? WHERE id=?
+            UPDATE users SET name=?, email=?, password=?, role=? WHERE user_id=?
         ");
-        $stmt->bind_param("sssi", $username, $password, $role, $id);
+        $stmt->bind_param("ssssi", $name, $email, $password, $role, $id);
 
     } else {
         $stmt = $conn->prepare("
-            UPDATE users SET username=?, role=? WHERE id=?
+            UPDATE users SET name=?, email=?, role=? WHERE user_id=?
         ");
-        $stmt->bind_param("ssi", $username, $role, $id);
+        $stmt->bind_param("sssi", $name, $email, $role, $id);
     }
 
     if ($stmt->execute()) {
