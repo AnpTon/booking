@@ -187,7 +187,11 @@ $borrow = $conn->query("
                                     <td><?= $row['record_id'] ?></td>
                                     <td><?= htmlspecialchars($row['user_name']) ?></td>
                                     <td><?= htmlspecialchars($row['book_title']) ?></td>
-                                    <td><?= ucfirst($row['status']) ?></td>
+                                    <td>
+                                        <span class="badge bg-warning text-dark">
+                                            <?= ucfirst($row['status']) ?>
+                                        </span>
+                                    </td>
                                     <td><?= $row['borrow_date'] ?></td>
                                     <td><?= $row['return_date'] ?></td>
                                     <td>
