@@ -199,6 +199,10 @@ $borrow = $conn->query("
                                             <a href="borrow_approve.php?id=<?= $row['record_id'] ?>" class="btn btn-success btn-sm">
                                                 Approve Borrow
                                             </a>
+                                            
+                                            <a href="borrow_reject.php?id=<?= $row['record_id'] ?>" class="btn btn-danger btn-sm">
+                                                Reject Borrow
+                                             </a>
                                         <?php endif; ?>
 
                                         <?php if ($row['status'] === 'return_pending'): ?>
